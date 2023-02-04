@@ -1,0 +1,89 @@
+.main{
+    width: 100vw;
+    background-color: var(--quaternary-color);    
+}
+
+
+.pageContent{
+    display:flex;
+    flex-direction: column;
+    padding: 180px 12vw;
+}
+
+.pageTitleContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    margin-bottom: 80px;
+}
+
+.pageLine{
+    flex-grow: 1;
+    background-color: var(--secondary-color);
+    height: 3px;
+    border: none;
+}
+
+.pageTitle{
+    color: var(--primary-color);
+}
+
+.pageBody{
+    display:flex;
+    flex-direction: column;
+    padding: 0 15vw;
+    color: var(--primary-color);
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+
+.carouselImage{
+    position:relative;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0px;
+}
+
+.carouselImage > img{
+    height: 100%;
+}
+
+.pageArrow{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 0px;
+    height: 40px;
+}
+
+.testOnImageHere{
+    background-color: var(--quinary-color);
+    padding: 10px;
+    margin: 0px 50px;
+}
+
+.pageList{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: var(--primary-color);
+    font-family: var(--font-mono);
+    font-weight: 100;
+}
+
+.pageList > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    list-style: none;
+}

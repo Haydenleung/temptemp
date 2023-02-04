@@ -1,0 +1,97 @@
+.navbar{
+    position: absolute;
+    background-color: transparent;
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px 8vw;
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../public/background-images/backgroundMountain.jpg");
+    background-size:cover;   
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+}
+
+.pageContent{
+    margin: calc(160px + 12vw) 55vw 0vw 18vw; 
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.pageTitle{
+    color: var(--primary-color);
+}
+
+.pageBody{
+    color: var(--primary-color);
+}
+
+.pageLine{
+    background-color: var(--secondary-color);
+    width: 60%;
+    height: 3px;
+    border: none;
+}
+
+.buttonList{
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+}
+
+.pageButton{
+    background-color: transparent;
+    color: var(--primary-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+    border-color: var(--primary-color);
+    border-style: solid;
+    border-width: 1px;
+    font-size: 10pt;    
+}
+
+.pageButton:hover{
+    background-color: var(--primary-color);
+    color: var(--quaternary-color);
+}
+
+.pageArrow{
+    position: fixed;
+    bottom: 8vw;
+    right: 8vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 120px;
+}
+
+.pageArrow > a > span > img{
+    width: 40px;
+}
+
+/* Inner Square */
+
+
+/* Enable hover only on non-touch devices */
+
+/* Mobile */
+@media (max-width: 600px) {
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 601px) and (max-width: 1000px) {
+}
+
+/* Desktop */
+@media (min-width: 1001px) {
+}
