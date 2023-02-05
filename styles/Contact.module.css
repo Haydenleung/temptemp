@@ -1,0 +1,141 @@
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../public/background-images/backgroundMountainUpsideDown.jpg");
+    background-size:cover;   
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+}
+
+.pageContent{
+    display:flex;
+    flex-direction: column;
+    padding: 140px 12vw;
+}
+
+
+.pageTitleContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    margin-top: 60px;
+    margin-bottom: 120px;
+}
+
+.pageLine{
+    flex-grow: 1;
+    background-color: var(--secondary-color);
+    height: 3px;
+    border: none;
+}
+
+.pageTitle{
+    color: var(--primary-color);
+}
+
+.pageBody{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15vw;
+    color: var(--primary-color);
+    gap: 5vw;
+}
+
+.pageForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.singleInput{    
+    padding: 30px;
+    border-style: solid;
+    border-color: var(--quinary-color);
+    border-width: 1px;
+}
+
+.singleTable{
+    width: 100%;
+}
+
+.singleTable > thead > tr > th{
+    text-align: left;
+    font-family: var(--font-mono);
+}
+
+.formInputA{
+    width: 100%;
+}
+
+.formInputB{
+    width: 200%;
+}
+
+.singleThead{
+    height: 30px;
+}
+
+.errorContainer{
+    display:flex;
+    flex-direction: column;
+    padding: 0 15vw;
+    color:brown;
+}
+
+.errorContainer > h3{
+    line-height: 200%;
+}
+
+.buttonContainer{    
+    width: 100;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button{
+    margin-top: 20px;
+    color: var(--primary-color);
+    background-color: transparent;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: var(--primary-color);
+    visibility: hidden;
+}
+
+.button:hover{    
+    color: var(--quaternary-color);
+    background-color: var(--primary-color);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .pageBody{
+        padding: 0;
+    }
+    .singleThead{
+        height: 25px;
+    }
+    .errorContainer{
+        padding: 0;
+    }
+}
+
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 601px) and (max-width: 1000px) {
+    .pageBody{
+        padding: 0;
+    }
+    .singleThead{
+        height: 25px;
+    }
+    .errorContainer{
+        padding: 0;
+    }
+}

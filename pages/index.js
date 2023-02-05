@@ -5,12 +5,14 @@ import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
 import { useState } from 'react'
 import Arrow from '@/components/Card/index'
+import Menu from '@/components/Card/Menupop'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
   const [arrow, setArrow] = useState('0');
+  const [popup, setPopup] = useState(false);
 
   return (
     <>
@@ -22,7 +24,7 @@ export default function Home() {
         <title>Home</title>
       </Head>
       <header className={styles.navbar}>
-        <img src={'icons/menu-icon.png'} width="50px"></img>
+        <Menu />
         <img src={'icons/graduation-hat.png'} width="60px"></img>
       </header>
       <main className={styles.main}>

@@ -4,17 +4,17 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import aboutstyles from '@/styles/About.module.css'
 import Arrow from '@/components/Card/index'
+import Menu from '@/components/Card/Menupop'
 import { useState, useEffect } from 'react';
 import data from '../data/words.json'
 import React from 'react';
+
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function About() {
 
-    const [words, setWords] = useState([...data]);
-    console.log(words);
-    const [des, setDes] = useState(['']);
+    const [information, setInformation] = useState([...data]);
     const [number, setNumber] = useState(0);
     useEffect(() => {
         if (number === 6) {
@@ -22,14 +22,13 @@ export default function About() {
         } else if (number === -1) {
             setNumber(5);
         }
-        words && words.map((info) => {
+        information && information.map((info) => {
             if (info.id == number) {
                 document.getElementById("testOnImageHere").innerText = info.value;
+                document.getElementById("mainImage").src = "/carousel-images/" + info.id + ".jpg";
             }
         })
     })
-    // document.getElementById("testOnImageHere").innerText = words;
-
     return (
         <>
             <Head>
@@ -42,7 +41,7 @@ export default function About() {
 
             <main class={aboutstyles.main}>
                 <header className={styles.navbar}>
-                    <img src={'icons/menu-icon.png'} width="50px"></img>
+                    <Menu />
                     <img src={'icons/graduation-hat.png'} width="60px"></img>
                 </header>
                 <div className={aboutstyles.pageContent}>
@@ -65,19 +64,19 @@ export default function About() {
                     </div>
                     <div>
                         <div id="carouselImage" className={aboutstyles.carouselImage}>
-                            <img src={"/carousel-images/0.jpg"} />
+                            <img id="mainImage" src={"/carousel-images/0.jpg"} />
                             <div className={aboutstyles.pageArrow}>
-                                <img src={"icons/leftArrow.png"} onClick={() => { setWords('apple'); setNumber(number - 1) }} />
+                                <img src={"icons/leftArrow.png"} onClick={() => { setNumber(number - 1) }} />
                                 <div id="testOnImageHere" className={aboutstyles.testOnImageHere}></div>
-                                <img src={"icons/rightArrow.png"} onClick={() => { setWords('apple'); setNumber(number + 1) }} />
+                                <img src={"icons/rightArrow.png"} onClick={() => { setNumber(number + 1) }} />
                             </div>
                         </div>
+                    </div>
 
-                        <div className={aboutstyles.pageTitleContainer}>
-                            <hr className={aboutstyles.pageLine} />
-                            <h1 className={aboutstyles.pageTitle}>DEPARTMENTS</h1>
-                            <hr className={aboutstyles.pageLine} />
-                        </div>
+                    <div className={aboutstyles.pageTitleContainer}>
+                        <hr className={aboutstyles.pageLine} />
+                        <h1 className={aboutstyles.pageTitle}>DEPARTMENTS</h1>
+                        <hr className={aboutstyles.pageLine} />
                     </div>
                     <div className={aboutstyles.pageList}>
                         <ul>

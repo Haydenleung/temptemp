@@ -1,6 +1,4 @@
 import styles from '@/styles/Home.module.css'
-import aboutstyles from '@/styles/About.module.css'
-import contactstyles from '@/styles/Contact.module.css'
 
 export default function Arrow({
     page = "Home",

@@ -6,7 +6,47 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 50px 8vw;
+    padding: 50px 5vw;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.humburger{
+    position:absolute;    
+    left: 90px;
+    width: 50px;
+}
+
+.menu > h1{
+    color: var(--primary-color);
+    position:absolute;
+    top: 70px;
+    left: 50px;
+}
+
+.menuImage{
+    max-width: 350px;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(12px + 1vw);
+    position: absolute;
+    top: 100px;
+    left: calc(100px + 3vw);
+    list-style: none;    
+}
+
+.item{
+    font-size: 20px;
+    font-family: var(--font-mono);
+    color: var(--primary-color);
 }
 
 .main{
@@ -20,10 +60,10 @@
 }
 
 .pageContent{
-    margin: calc(160px + 12vw) 55vw 0vw 18vw; 
+    margin: calc(350px + 6vw) 55vw 0vw 18vw; 
     display: flex;
     flex-direction: column;
-    gap: 1vw;
+    gap: 20px;
 }
 
 .pageTitle{
@@ -81,17 +121,41 @@
 
 /* Inner Square */
 
-
-/* Enable hover only on non-touch devices */
-
 /* Mobile */
 @media (max-width: 600px) {
+    .navbar{
+        padding-right: 30px;
+    }
+    .pageArrow{ 
+        right: 30px;
+    }
+    .pageContent{
+        margin-top: 300px;
+        margin-left:  30px;
+        margin-right: 80px;         
+    }
+    .humburger{
+        left: 30px;
+    }    
+    .menuImage{
+        max-width: 250px;
+    }
 }
+
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 601px) and (max-width: 1000px) {
-}
-
-/* Desktop */
-@media (min-width: 1001px) {
+    .navbar{
+        padding-right: 90px;
+    }
+    .pageArrow{ 
+        right: 90px;
+    }
+    .pageContent{
+        margin-left:  90px;
+        margin-right: 220px;         
+    }
+    .menuImage{
+        max-width: 300px;
+    }
 }
