@@ -39,7 +39,7 @@ export default function About() {
                 <title>About Us</title>
             </Head>
 
-            <main class={aboutstyles.main}>
+            <main className={aboutstyles.main}>
                 <header className={styles.navbar}>
                     <Menu />
                     <img src={'icons/graduation-hat.png'} width="60px"></img>
@@ -66,9 +66,9 @@ export default function About() {
                         <div id="carouselImage" className={aboutstyles.carouselImage}>
                             <img id="mainImage" src={"/carousel-images/0.jpg"} />
                             <div className={aboutstyles.pageArrow}>
-                                <img src={"icons/leftArrow.png"} onClick={() => { setNumber(number - 1) }} />
+                                <img src={"/icons/leftArrow.png"} onClick={() => { setNumber(number - 1) }} />
                                 <div id="testOnImageHere" className={aboutstyles.testOnImageHere}></div>
-                                <img src={"icons/rightArrow.png"} onClick={() => { setNumber(number + 1) }} />
+                                <img src={"/icons/rightArrow.png"} onClick={() => { setNumber(number + 1) }} />
                             </div>
                         </div>
                     </div>
